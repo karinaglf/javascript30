@@ -1,0 +1,71 @@
+/*
+  misc styles, nothing to do with CSS variables
+*/
+
+body {
+  text-align: center;
+  background: #42414b;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+.image-box {
+    width: 500px;
+    height: 500px;
+    background-image: url("https://source.unsplash.com/7bwQXzbF6KE/800x500");
+    background-repeat: no-repeat;
+    background-size: cover;   
+    background-position: center;
+    border: solid;
+}
+input {
+  width: 100px;
+}
+
+/*
+  CSS Variable
+*/
+:root {
+    --border-color: #e9e511;
+    --border-width: 0px;
+    --border-radius: 0px;
+    --blur: 0px;
+}
+
+.image-box { 
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+    filter: blur(var(--blur));
+}
+
+.hl {
+    color: var(--border-color);
+}
+
+---
+/* :root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+  }
+
+  img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+  }
+
+  .hl {
+    color: var(--base);
+  } */
